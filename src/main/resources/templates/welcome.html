@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>welcome</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+.logo {
+ font-size: 200px;
+ padding: 20px;
+}
+
+.thumb {
+ font-size: 100px;
+ padding: 15px;
+}
+</style>
+
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+		th:href="@{css/bootstrap.min.css}" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	  	<script src="../static/js/bootstrap.min.js" th:href="@{js/bootstrap.min.js}"></script> 
+</head>
+<body style=" background-color: #baaaad">
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:silver;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">My First Bootstrap Page</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#konzultace">Konzultace</a></li>
+        <li><a href="#obsah_cv">Obsah cvičení</a></li>
+        <li><a href="#dcv">Domácí úkoly</a></li>
+        <li><a href="#soubory">Soubory ke stažení</a></li>
+        <li><a href="#dopor_lit">Doporučená literatura</a></li>
+        <li><a href="#predn">Přednášky a doplňkové zdroje</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+ <h1>Hello world</h1>
+  <div id="konzultace" class="row" style="background-color:yellow;">
+    <div class="col-lg-8">
+            <h4>Konzultace</h4>
+            <p>Vypsány v ...............</p>
+             <table class="table">
+             <tr>
+             <td>Po</td> <td>0 -0 </td> <td>1-1</td>
+             </tr>
+             <tr>
+             <td>Út</td> <td>0 -0 </td> <td>1-1</td>
+             </tr>
+             <tr>
+             <td>St</td> <td>0 -0 </td> <td>1-1</td>
+             </tr>
+             <tr>
+             <td>Čt</td> <td>0 -0 </td> <td>1-1</td>
+             </tr>
+             <tr>
+             <td>Pá</td> <td>0 -0 </td> <td>1-1</td>
+             </tr>
+             </table>
+    </div>
+    <div class="col-lg-4" style="background-color:yellow;">
+    	<span class="glyphicon glyphicon-pencil logo" ></span>
+    </div>
+  
+</div>
+
+  <div id="obsah_cv" class="row" style="background-color:pink;"> 
+   <div class="col-lg-4" >
+   	<span class="glyphicon glyphicon-cog logo" ></span>
+   </div>
+   <div class="col-lg-4" >
+  	  <h4>Obsah cvičení</h4>
+  	  <ul class="list-inline">
+  	  	<li><a href="#">Cv.1</a></li>
+  	  	<li><a href="#">Cv.2</a></li>
+  	  	<li><a href="#">Cv.3</a></li>
+  	  </ul>
+    </div>
+</div>
+
+ <div id="dcv" class="row" style="background-color:#aabbcc;"> 
+   <div class="col-lg-4">
+	 <h4>Domácí úkoly</h4>
+      <p><p th:text="'Hello, ' + ${date} + '!'" /></p>
+      <ul class="list-inline">
+  	  	<li><a href="#">Du.1</a></li>
+  	  	<li><a href="#">Du.2</a></li>
+  	  	<li><a href="#">Du.3</a></li>
+  	  </ul>
+    </div>
+    <div class="col-lg-4">
+      	<span class="glyphicon glyphicon-list-alt logo" ></span>
+    </div>
+   </div>
+    
+     <div id="soubory" class="row" style="background-color:#cbabca;"> 
+   <div class="col-lg-4" >
+       	<span class="glyphicon glyphicon-download-alt logo" ></span>
+    </div>
+      <div class="col-lg-4" >
+      <h4>Soubory ke stažení</h4>
+    </div>
+</div>
+
+<div class="row text-center" style="background-color:#cacabb;"> 
+<div id="dopor_lit" class="col-lg-12">
+    <h4>Doporučená literatura</h4>
+	<ul class="list-inline">
+	<li>
+	<span class="glyphicon glyphicon-camera thumb"></span>
+	<h5>Nazev knihy</h5>
+	<p>Popis</p>
+	</li>
+	<li>
+	<span class="glyphicon glyphicon-camera thumb"></span>
+	<h5>Nazev knihy</h5>
+	<p>Popis</p>
+	</li>
+	<li>
+	<span class="glyphicon glyphicon-camera thumb"></span>
+	<h5>Nazev knihy</h5>
+	<p>Popis</p>
+	</li>
+	</ul>
+    </div>
+</div>
+
+<div id="predn" class="row text-center"> 
+   <div class="col-lg-12" style="background-color:#abccba; padding: 10px;">
+      <h4>Přednášky a doplňkové zdroje</h4>
+      <ul class="list-inline">
+      <li><a href="#">Videa</a></li>
+      <li><a href="#">Starší přednášky</a></li>
+      <li><a href="#">Doplňkové texty</a></li>
+      </ul>
+    </div>
+</div>
+
+<div class="row text-center"> 
+   <div class="col-lg-12" style="background-color:#abccba;">
+      <h4><a href="#">Animované výklady</a></h4>
+    
+    </div>
+</div>
+<footer class="container-fluid text-center">
+<p>Made by: Tomáš Růžička</p>
+</footer>
+
+</div>
+
+
+
+
+   
+
+</body>
+</html>
